@@ -1,12 +1,14 @@
 import React from 'react';
 
-function Nav(){
-
-    return(
-        <div>
-            Nav
-        </div>
-    )
+function Nav(props) {
+    if (props.location.pathname !== '/') {
+        return (
+            <div>
+                Nav
+            </div>
+        )
+    }
+    return null
 }
 
 export default Nav;
