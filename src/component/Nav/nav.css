@@ -1,0 +1,48 @@
+.main-nav-container{
+    width:100px;
+    height:100vh;
+    position:fixed;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:green;
+    align-items: center;
+}
+.nav-top-items{
+    width:100px;
+    height:250px;
+    display:flex;
+    flex-direction: column;
+    margin-top:15px;
+    align-items: center;
+}
+.nav-bottom-items{
+    width:100px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+}
+.home{
+    background-image: url('../../assets/home.png');
+    background-size:cover;
+    height:30px;
+    width:30px;
+    margin-bottom:10px;
+}
+.new-post{
+    background-image: url('../../assets/blog.png');
+    background-size:cover;
+    height:30px;
+    width:30px;
+    margin-bottom:10px;
+}
+.logout{
+    background-image: url('../../assets/logout.png');
+    background-size:cover;
+    height:30px;
+    width:30px;
+    margin-bottom:10px;
+    transform: rotate(180deg)
+}
