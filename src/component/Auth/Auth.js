@@ -18,7 +18,9 @@ class Auth extends Component {
     newUser = () => {
         axios.post('http://localhost:8080/new_user', {username: this.state.usernameInput, password: this.state.passwordInput})
         .then(response => console.log (response))
+        .then(this.setState({ usernameInput: '', passwordInput: ''}))
     }
+    
 
     render() {
         return (
