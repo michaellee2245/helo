@@ -20,9 +20,22 @@ class Auth extends Component {
         .then(response => console.log (response))
         .then(this.setState({ usernameInput: '', passwordInput: ''}))
     }
+
+    loginUser = () => {
+        axios.post('http://localhost:8080/login', {username: this.state.usernameInput, password: this.state.passwordInput})
+        .then((response) => {
+            this.props.history.push('/dashboard')
+            
+        })
+        .catch((error) => {
+            console.log({error})
+            this.setState({usernameInput:'', passwordInput: ''})
+        })
+    }
     
 
     render() {
+        console.log(this.props)
         return (
             <div className="background-container">
                 <div className="main-auth-container">
@@ -34,7 +47,7 @@ class Auth extends Component {
                         <input name="passwordInput" value={this.state.passwordInput} onChange={this.onInputChange} />
                     </div>
                     <div>
-                        <button>Login</button>
+                        <button onClick={this.loginUser}>Login</button>
                         <button onClick={this.newUser} >Register</button>
                     </div>
                 </div>
