@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './auth.css';
-import axios from 'axios'
+import axios from 'axios';
+import { connect } from 'react-redux';
 
 class Auth extends Component {
 
